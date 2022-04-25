@@ -2,12 +2,26 @@ package com.company;
 
 public class Main {
 
+    int[] arr = generateRandomArray();
+
+    public static int[] generateRandomArray() {
+        java.util.Random random = new java.util.Random();
+        int[] arrRandom = new int[30];
+        for (int i = 0; i < arrRandom.length; i++) {
+            arrRandom[i] = random.nextInt(100_000) + 100_000;
+            //   System.out.println(arr[i]);
+        }
+        return arrRandom;
+    }
+
     public static void main(String[] args) {
 	// write your code here
        // Задача1
-      int[] arr={150_200, 115_100, 105_600, 103_400, 180_300, 165_900, 154_400, 175_900, 134_300, 107_500, 109_300, 118_200,
-      190_700, 123_600, 179_500, 144_700, 185_400, 146_800, 153_600, 163_700, 137_700, 145_500, 153_800, 172_100, 163_500, 188_100, 110_300,
-      113_600, 114_800, 151_900};
+      int[] arr = generateRandomArray();
+        for(int i=0; i < arr.length; i++) {
+            System.out.println(arr[i]);
+        }
+
       int sum = 0;
       for(int i=0; i< arr.length; i++) {
           sum += arr[i];
